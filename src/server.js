@@ -20,6 +20,9 @@ $.init.add((done)=>{
   $.env=env;
   done();
 });
+//初始化MongoDB
+$.init.load(path.resolve(__dirname,"init","mongodb.js"));
+//初始化
 $.init((err)=>{
   if (err) {
     console.error(err);
