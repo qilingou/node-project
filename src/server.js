@@ -4,12 +4,16 @@
 *
 *@author Qilin Gou<gouqilin@outlook.com>
 */
-
+import createDebug from 'debug';
 import path from 'path';
 import ProjectCore from 'project-core';
 
 const $=global.$=new ProjectCore();
 
+$.createDebug=function(name){
+  return createDebug('node:'+name);
+}
+const debug=$.createDebug('server');
 //加载配置文件
 $.init.add((done)=>{
   $.config.load(path.resolve(__dirname,'config.js'));
