@@ -24,6 +24,11 @@ $.init.add((done)=>{
 $.init.load(path.resolve(__dirname,"init","mongodb.js"));
 //加载models
 $.init.load(path.resolve(__dirname,"models"));
+
+//初始化Express
+$.init.load(path.resolve(__dirname,"init","express.js"));
+//初始化路由
+$.init.load(path.resolve(__dirname,"routes"))
 //初始化
 $.init((err)=>{
   if (err) {
