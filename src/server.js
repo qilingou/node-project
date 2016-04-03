@@ -29,6 +29,8 @@ $.init.load(path.resolve(__dirname,"init","mongodb.js"));
 //加载models
 $.init.load(path.resolve(__dirname,"models"));
 
+//加载methods
+$.init.load(path.resolve(__dirname,"methods"));
 //初始化Express
 $.init.load(path.resolve(__dirname,"init","express.js"));
 //初始化路由
@@ -40,8 +42,11 @@ $.init((err)=>{
     process.exit(-1);
   }
   else {
-      console.log("inited [env=%s]",$.env);
+      console.log(`inited [env=%s]`,$.env);
   }
+  require('./test');
+
+
   const item=new $.model.User({
     name:'test',
     pwd:'123456',
