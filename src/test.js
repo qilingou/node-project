@@ -11,3 +11,10 @@ $.method('user.add').call({
   nickname:'测试用户',
   about:'测试'
 },console.log);
+/*$.method('user.get').call({
+  name:'hello123',
+},console.log);*/
+/*$.method('user.update').call({
+  name:'hello123',
+  password:'654321',
+},console.log);*/
